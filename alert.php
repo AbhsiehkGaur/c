@@ -1,6 +1,9 @@
 
 <style>
 .alert {
+    position: fixed;
+    top: 0;
+right: 0;
   padding: 20px;
   background-color: #f44336;
   color: white;
@@ -22,15 +25,22 @@
 }
 </style>
 <?php
-if(isset($_SESSION['message'])){
+
+
+if(isset($_SESSION['message']) && $_SESSION['message']){
     echo '
 <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display="none";">&times;</span> 
 '.$_SESSION['message'].'
 </div>
 ';
-unset($_SESSION['message']);
+
 }
+
 ?>
-</body>
-</html>
+
+
+
+<?php
+unset($_SESSION['message']);
+?>

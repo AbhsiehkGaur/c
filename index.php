@@ -38,7 +38,8 @@
       </a>
     </li>
     <li>
-      <?php 
+      <?php
+      // echo $_SESSION['message'];
       if(isset($_SESSION['login_user']) && $_SESSION['login_user']){
         echo '<a href="survey_view.php">
         <span class="code">&lt;</span>
@@ -150,5 +151,6 @@
 </footer>
 
 </body>
+
 
 </html>

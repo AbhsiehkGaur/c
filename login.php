@@ -30,6 +30,7 @@
          header("Location: index.php");
       }else {
          $_SESSION['message'] = "Your Login Name or Password is invalid";
+         echo $_SESSION['message'];
          header("Location: log.php");
       }
    }
